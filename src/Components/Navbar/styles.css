@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Product_Sans;
+    src: url("../../assests//fonts/Product_Sans.ttf");
+}
+
+.navbar{
+display: flex;
+align-items: center;
+margin:1.25rem;
+font-family: Product_Sans;
+}
+
+.logo{
+    width: 31%;
+}
+
+.logo img{
+    width: 30%;
+    height: 60%;
+}
+
+.navbarItem{
+    width:50%;
+    margin-right:2rem;
+}
+
+.navbarItem ul{
+text-decoration: none;
+list-style-type:none;
+text-transform: uppercase;
+display: flex;
+gap: 20px;
+}
+
+.navbarItem ul li Link{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.userProfile{
+    display: flex;
+   text-transform: uppercase;
+   width:29%;
+   gap:5px;
+}
+
+
+@media only screen and (min-width:890px) and (max-width: 1059px){
+    
+    .userProfile{
+        width: 18%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width:890px)
+{
+    .logo{
+        width: 50%;
+    }
+    .navbarItem{
+        width: 50%;
+    }
+    .userProfile{
+        width:50%;
+        justify-content: center;
+    }
+}

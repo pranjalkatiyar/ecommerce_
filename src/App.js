@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import NavBar from "./Components/Navbar/Navbar";
+import Card from "./Components/contactcard/Card";
+import Journey from "./Components/Journey/Journey";
+import Team from "./Components/Team/Team";
+import Store from "./Components/Store/Store";
+import Specific from "./Components/Store/specificProduct/Specific";
+import {Routes,Route} from 'react-router-dom';
+ import CartContext from "./Components/Context/Context";
 function App() {
   return (
+    
+    <CartContext>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Store/>} />
+        <Route path="journey" element={<Journey/>} />
+        <Route path="team" element={<Team/>} />
+        <Route path="contact" element={<Card/>} />
+        <Route path="product/:id" element={<Specific/>} />
+      </Routes>
     </div>
+    </CartContext>
+    
   );
 }
 
